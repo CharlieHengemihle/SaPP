@@ -15,7 +15,7 @@ export default function Navbar() {
           src={require("../assets/nav-logo.png")}
           alt="Little Lemon logo"
           className="nav-image"
-        ></img>
+        />
 
         <button className="burger-icon" onClick={handleToggle}>
           <img src={navbarOpen ? Close : Hamburger} alt="Navigation Bar" />
