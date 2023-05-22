@@ -1,6 +1,5 @@
 # Alchemy React Base Template
 
-https://github.com/Ephrem2166/Little-Lemon-Restaurant/tree/master/src/components/sections/headingPages
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
