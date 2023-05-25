@@ -8,6 +8,32 @@ export default function Navbar() {
     setNavbarOpen(!navbarOpen);
   }
 
+  const burgerStyle = {
+    position: 'fixed',
+    top: '10px',
+    right: '10px',
+    width: '30px',
+    height: '30px',
+    backgroundColor: 'transparent',
+    border: 'none',
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 9999,
+  };
+
+  const iconStyle = {
+    width: '20px',
+    height: '20px',
+    position: 'relative',
+    transition: 'transform 0.3s ease',
+  };
+
+  const handleButtonHover = () => {
+    iconStyle.transform = 'scaleX(0.8)';
+  };
+
   return (
     <nav>
       <nav className="burger">
@@ -17,11 +43,11 @@ export default function Navbar() {
           className="nav-image"
         />
 
-        <button className="burger-icon" onClick={handleToggle}>
-          <img src={burger} alt="Navigation Bar" />
+        <button style={burgerStyle} onMouseEnter={handleButtonHover} onClick={handleToggle}>
+          <img style={iconStyle} src={burger} alt="Navigation Bar" className="burger" />
         </button>
       </nav>
-      <Navigation device="desktop" />
+      {/* <Navigation device="desktop" /> */}
       {navbarOpen ? <Navigation device="mobile" /> : ''}
     </nav>
   );

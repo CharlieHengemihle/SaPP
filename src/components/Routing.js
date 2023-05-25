@@ -13,7 +13,7 @@ export default function Routing() {
 
       <Route path="/species" element={<SpeciesOfInterest />} />
 
-      <Route path="/getinvolved" element={<GetInvolved />} />
+      <Route path="/getInvolved" element={<GetInvolved />} />
     </Routes>
   );
 }
