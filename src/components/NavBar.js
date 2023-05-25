@@ -1,7 +1,7 @@
-import { useState } from "react";
-import Navigation from "./Navigation";
-import Hamburger from "../assets/hamburger.png";
-import Close from "../assets/close.png";
+import { useState } from 'react';
+import Navigation from './Navigation';
+import burger from '../assets/burger.png';
+// import Close from '../assets/close.png';
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   function handleToggle() {
@@ -12,17 +12,17 @@ export default function Navbar() {
     <nav>
       <nav className="burger">
         <img
-          src={require("../assets/nav-logo.png")}
+          src={require('../assets/SaPP_logo.png')}
           alt="Little Lemon logo"
           className="nav-image"
         ></img>
 
         <button className="burger-icon" onClick={handleToggle}>
-          <img src={navbarOpen ? Close : Hamburger} alt="Navigation Bar" />
+          <img src={burger} alt="Navigation Bar" />
         </button>
       </nav>
       <Navigation device="desktop" />
-      {navbarOpen ? <Navigation device="mobile" /> : ""}
+      {navbarOpen ? <Navigation device="mobile" /> : ''}
     </nav>
   );
 }

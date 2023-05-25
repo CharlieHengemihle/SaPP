@@ -1,5 +1,7 @@
 export default function SpeciesOfInterest() {
-    return (
-
-    );
+  return (
+    <>
+      <h1>Species</h1>
+    </>
+  );
 }

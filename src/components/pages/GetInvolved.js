@@ -1,5 +1,7 @@
 export default function GetInvolved() {
-    return (
-
-    );
+  return (
+    <>
+      <h1>Get Invloved</h1>
+    </>
+  );
 }
