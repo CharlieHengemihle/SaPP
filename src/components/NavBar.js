@@ -4,6 +4,8 @@ import burger from '../assets/burger.png';
 // import Close from '../assets/close.png';
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false); // State to manage hover effect
+
   function handleToggle() {
     setNavbarOpen(!navbarOpen);
   }
@@ -28,6 +30,7 @@ export default function Navbar() {
     height: '20px',
     position: 'relative',
     transition: 'transform 0.3s ease',
+    transform: isHovered ? 'scaleX(0.8)' : 'scaleX(1)', // Apply transform based on hover state
   };
 
   const handleButtonHover = () => {
@@ -43,7 +46,12 @@ export default function Navbar() {
           className="nav-image"
         />
 
-        <button style={burgerStyle} onMouseEnter={handleButtonHover} onClick={handleToggle}>
+        <button
+          style={burgerStyle}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onClick={handleToggle}
+        >
           <img style={iconStyle} src={burger} alt="Navigation Bar" className="burger" />
         </button>
       </nav>
