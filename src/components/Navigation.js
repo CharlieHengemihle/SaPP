@@ -1,52 +1,75 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 export default function Navigation(props) {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const menuStyle = {
     position: 'fixed',
-    top: '40%',
+    top: '0',
+    left: '0',
     right: '0',
-    transform: 'translateY(-100%)',
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-    width: 'fit-content',
-    maxWidth: '100%',
-    backgroundColor: '#fff',
-    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
-    padding: '10px',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    padding: '10px 20px',
+    backgroundColor: isScrolled ? 'rgba(0,0,0, 0.8)' : 'transparent',
+    boxShadow: isScrolled ? '0 2px 5px rgba(0, 0, 0, 0.1)' : 'none',
     zIndex: 9999,
+    transition: 'background-color 0.3s ease',
   };
 
   const linkStyle = {
     textDecoration: 'none',
-    margin: '5px 0',
+    margin: '0 10px',
+    color: 'rgba(255,255,255)',
+    fontWeight: 'bold',
   };
 
+  // const logoStyle = {
+  //   maxHeight: '40px',
+  // };
+
   return (
-    <menu className={`navbar-menu ${props.device}`} style={menuStyle}>
-      {props.device === 'mobile' ? (
-        ''
-      ) : (
-        <Link to="/">
-          <img
-            src={require('../assets/SaPP_logo.png')}
-            alt="Songbirds as Pollinators Project Logo"
-            className="nav-image"
-          ></img>
+    <nav style={menuStyle}>
+      {/* <Link
+        to="/"
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+        }}
+      >
+        <img
+          src={require('../assets/SaPP_logo.png')}
+          alt="Songbirds as Pollinators Project Logo"
+          style={logoStyle}
+        />
+        <Typography style={linkStyle}> Carolyn Coyle </Typography>
+      </Link> */}
+      <div style={{ display: props.device === 'mobile' ? 'none' : 'flex' }}>
+        <Link className="hover-effect" to="/" style={linkStyle}>
+          Home
         </Link>
-      )}
-      <Link className="hover-effect" to="/" style={linkStyle}>
-        <h1>Home</h1>
-      </Link>
-      <Link className="hover-effect" to="/about" style={linkStyle}>
-        <h1>About</h1>
-      </Link>
-      <Link className="hover-effect" to="/species" style={linkStyle}>
-        <h1>Species Of Interest</h1>
-      </Link>
-      <Link className="hover-effect" to="/getInvolved" style={linkStyle}>
-        <h1>Get Involved</h1>
-      </Link>
-    </menu>
+        <Link className="hover-effect" to="/research" style={linkStyle}>
+          Research
+        </Link>
+        <Link className="hover-effect" to="/resume" style={linkStyle}>
+          Species Of Interest
+        </Link>
+        <Link className="hover-effect" to="/getInvolved" style={linkStyle}>
+          Get Involved
+        </Link>
+      </div>
+    </nav>
   );
 }

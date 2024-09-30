@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, Typography, Box } from '@mui/material';
-import icon from '../../assets/SaPP_logo.png';
 import caro from '../../assets/Coyle.jpg';
 import banner from '../../assets/Banner.jpeg';
 
@@ -10,11 +9,9 @@ export default function HomePage() {
     <Box
       sx={{
         backgroundColor: 'rgb(218, 222, 203)',
-        padding: '20px',
         textAlign: 'center',
       }}
     >
-      {/* Banner Section */}
       <Box
         sx={{
           position: 'relative',
@@ -23,11 +20,11 @@ export default function HomePage() {
           marginBottom: '20px',
         }}
       >
-        {/* <img
+        <img
           src={banner}
           alt="Orange Crowned Warbler in prunus species"
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        /> */}
+        />
         <Box
           sx={{
             position: 'absolute',
@@ -54,13 +51,13 @@ export default function HomePage() {
 
       {/* Main Content Section */}
       <Grid container spacing={3} justifyContent="center">
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <img
             src={icon}
             alt="warbler visiting a red currant flower"
             style={{ maxWidth: '100%', marginBottom: '20px' }}
           />
-        </Grid>
+        </Grid> */}
 
         <Grid item xs={12} md={8}>
           <Grid container spacing={3} alignItems="center">
@@ -72,19 +69,19 @@ export default function HomePage() {
               />
             </Grid>
             <Grid item xs={12} md={8}>
-              <Typography variant="h3" gutterBottom>
+              <Typography sx={{ fontSize: '14px', textAlign: 'left' }} gutterBottom>
                 Welcome! My name is Carolyn Coyle, a Ph.D. candidate in the Graduate Degree Program
                 in Ecology, housed in the Fish, Wildlife, and Conservation Biology Department at
                 Colorado State University.
               </Typography>
-              <Typography paragraph>
+              <Typography sx={{ fontSize: '14px', textAlign: 'left' }}>
                 My research centers on plant-animal interactions, with a special focus on songbirds
                 as potential pollinators. With interests that span conservation biology,
                 ornithology, and pollination ecology, I have developed a deep passion for
                 understanding how birds contribute to ecosystem health, and a curiosity on how this
                 may shift across urban gradients.
               </Typography>
-              <Typography paragraph>
+              <Typography sx={{ fontSize: '14px', textAlign: 'left' }}>
                 As a dedicated conservation biologist and advocate for mental health in academia, I
                 seek to blend rigorous science with community engagement, ensuring that my research
                 has both local and global impact. Currently, I am seeking postdoctoral opportunities
@@ -98,13 +95,14 @@ export default function HomePage() {
         </Grid>
 
         {/* News Section */}
-        <Grid item xs={12}>
-          <Typography variant="h2" gutterBottom>
+        <Grid item xs={12} width={'60%'} sx={{ justifyContent: 'flex-start' }}>
+          <Typography variant="h3" gutterBottom>
             News:
           </Typography>
-          <Typography paragraph>
-            5/2024 Great news! The Colorado State University Office of the Vice President for
-            Researcher (OVPR) has selected me as a part of the VPR Graduate Fellowship Cohort!{' '}
+          <Typography>
+            <strong>5/2024</strong> Great news! The Colorado State University Office of the Vice
+            President for Researcher (OVPR) has selected me as a part of the VPR Graduate Fellowship
+            Cohort!{' '}
             <a
               href="https://www.research.colostate.edu/vpr-graduate-fellowship-program/"
               target="_blank"
@@ -113,9 +111,9 @@ export default function HomePage() {
               Read more about this opportunity here.
             </a>
           </Typography>
-          <Typography paragraph>
-            5/2024 I am honored to have received a Wilson Ornithological Society Student Research
-            Grant! Thank you to WOS for supporting my research endeavors.{' '}
+          <Typography>
+            <strong>5/2024</strong> I am honored to have received a Wilson Ornithological Society
+            Student Research Grant! Thank you to WOS for supporting my research endeavors.{' '}
             <a
               href="https://wilsonsociety.org/2024/08/15/2024-wos-research-grant-recipients/"
               target="_blank"
@@ -124,16 +122,16 @@ export default function HomePage() {
               Read more here.
             </a>
           </Typography>
-          <Typography paragraph>
-            4/2024 Thank you to the Pasadena Audubon Society for awarding my dissertation research a
-            student research grant!{' '}
+          <Typography>
+            <strong>4/2024</strong> Thank you to the Pasadena Audubon Society for awarding my
+            dissertation research a student research grant!{' '}
             <a href="https://pasadenaaudubon.org/grants" target="_blank" rel="noreferrer">
               Read more here.
             </a>
           </Typography>
-          <Typography paragraph>
-            3/2024 I have received a Bloom-Hays Ecological Research Grant awarded by the Sea and
-            Sage Audubon Society. Thank you for supporting my dissertation work!{' '}
+          <Typography>
+            <strong>3/2024</strong> I have received a Bloom-Hays Ecological Research Grant awarded
+            by the Sea and Sage Audubon Society. Thank you for supporting my dissertation work!{' '}
             <a
               href="https://seaandsageaudubon.org/wp-content/uploads/GrantAward_Tattler_Longer-Article_040724.pdf"
               target="_blank"
@@ -142,9 +140,10 @@ export default function HomePage() {
               Read more here.
             </a>
           </Typography>
-          <Typography paragraph>
-            2/2024 I am honored that my dissertation research (SaP) has been featured in Dr. Jeff
-            Ollerton’s new book: Birds and Flowers: An Intimate 50 Million Year Relationship.{' '}
+          <Typography>
+            <strong>2/2024</strong> I am honored that my dissertation research (SaP) has been
+            featured in Dr. Jeff Ollerton’s new book: Birds and Flowers: An Intimate 50 Million Year
+            Relationship.{' '}
             <a
               href="https://www.barnesandnoble.com/w/birds-and-flowers-jeff-ollerton/1143269095"
               target="_blank"

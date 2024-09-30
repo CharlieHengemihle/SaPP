@@ -1,14 +1,19 @@
 import { useState } from 'react';
 import Navigation from './Navigation';
 import burger from '../assets/burger.png';
-// import Close from '../assets/close.png';
+
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false); // State to manage hover effect
+  const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  function handleToggle() {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  const handleToggle = () => {
     setNavbarOpen(!navbarOpen);
-  }
+  };
 
   const burgerStyle = {
     position: 'fixed',
@@ -19,7 +24,7 @@ export default function Navbar() {
     backgroundColor: 'transparent',
     border: 'none',
     cursor: 'pointer',
-    display: 'flex',
+    display: isMobile ? 'flex' : 'none',
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 9999,
@@ -30,33 +35,23 @@ export default function Navbar() {
     height: '20px',
     position: 'relative',
     transition: 'transform 0.3s ease',
-    transform: isHovered ? 'scaleX(0.8)' : 'scaleX(1)', // Apply transform based on hover state
+    transform: isHovered ? 'scaleX(0.8)' : 'scaleX(1)',
   };
 
-  const handleButtonHover = () => {
-    iconStyle.transform = 'scaleX(0.8)';
-  };
+  window.addEventListener('resize', handleResize);
 
   return (
-    <nav>
-      <nav className="burger">
-        <img
-          src={require('../assets/SaPP_logo.png')}
-          alt="Little Lemon logo"
-          className="nav-image"
-        />
-
-        <button
-          style={burgerStyle}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          onClick={handleToggle}
-        >
-          <img style={iconStyle} src={burger} alt="Navigation Bar" className="burger" />
-        </button>
-      </nav>
-      {/* <Navigation device="desktop" /> */}
-      {navbarOpen ? <Navigation device="mobile" /> : ''}
-    </nav>
+    <div>
+      <Navigation device={isMobile ? 'mobile' : 'desktop'} />
+      <button
+        style={burgerStyle}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onClick={handleToggle}
+      >
+        <img style={iconStyle} src={burger} alt="Navigation Bar" className="burger" />
+      </button>
+      {isMobile && navbarOpen && <Navigation device="mobile" />}
+    </div>
   );
 }
