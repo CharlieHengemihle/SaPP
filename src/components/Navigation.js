@@ -64,11 +64,11 @@ export default function Navigation(props) {
           Research
         </Link>
         <Link className="hover-effect" to="/resume" style={linkStyle}>
-          Species Of Interest
+          Resume
         </Link>
-        <Link className="hover-effect" to="/getInvolved" style={linkStyle}>
+        {/* <Link className="hover-effect" to="/getInvolved" style={linkStyle}>
           Get Involved
-        </Link>
+        </Link> */}
       </div>
     </nav>
   );

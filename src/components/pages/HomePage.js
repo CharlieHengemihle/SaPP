@@ -95,8 +95,13 @@ export default function HomePage() {
         </Grid>
 
         {/* News Section */}
-        <Grid item xs={12} width={'60%'} sx={{ justifyContent: 'flex-start' }}>
-          <Typography variant="h3" gutterBottom>
+        <Grid
+          item
+          xs={12}
+          md={8}
+          sx={{ justifyContent: 'center', textAlign: 'left', width: '100%', padding: '20px' }}
+        >
+          <Typography variant="h3" gutterBottom textAlign={'left'} paddingLeft={'20px'}>
             News:
           </Typography>
           <Typography>
@@ -149,27 +154,27 @@ export default function HomePage() {
               target="_blank"
               rel="noreferrer"
             >
-              Barnes and Nobles
+              Read more here.
             </a>
           </Typography>
         </Grid>
 
         {/* Links Section */}
         <Grid item xs={12} container justifyContent="center">
-          <Link to="/About" style={{ marginRight: '10px' }}>
-            Learn More
+          <Link to="/" style={{ marginRight: '10px' }}>
+            Home
           </Link>
-          <Link to="/Goals" style={{ marginRight: '10px' }}>
-            Goals & Motivation
+          <Link to="/research" style={{ marginRight: '10px' }}>
+            Research
           </Link>
-          <Link to="/getInvolved" style={{ marginRight: '10px' }}>
-            Get Involved
+          <Link to="/resume" style={{ marginRight: '10px' }}>
+            My Resume
           </Link>
         </Grid>
 
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <Link to="/protocol">Pollen Getting Protocol</Link>
-        </Grid>
+        </Grid> */}
       </Grid>
     </Box>
   );

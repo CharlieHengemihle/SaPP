@@ -23,16 +23,25 @@ export default function Research() {
           alt="Orange Crowned Warbler in prunus species"
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
-      </Box>
-      <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={12} md={8}>
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            color: '#fff',
+          }}
+        >
           <Typography variant="h1" gutterBottom>
             Research
           </Typography>
-          <Typography variant="h3" gutterBottom>
-            Dissertation Work: Songbirds as Pollinators (SaP) Project
-          </Typography>
-
+        </Box>
+      </Box>
+      <Typography variant="h3" gutterBottom>
+        Dissertation Work: Songbirds as Pollinators (SaP) Project
+      </Typography>
+      <Grid container spacing={2} justifyContent="center" textAlign={'left'}>
+        <Grid item xs={12} md={8}>
           <Typography variant="h5">
             <strong>Research Team:</strong>
           </Typography>
@@ -71,17 +80,13 @@ export default function Research() {
             network indices associated with redundancy, in bird-flower networks?
           </Typography>
 
-          <Typography variant="h2" gutterBottom>
+          <Typography variant="h5" gutterBottom paddingTop={'15px'}>
             Funding for this work is generously provided by:
           </Typography>
 
-          <ul>
-            {fundingSources.map((source, index) => (
-              <li key={index}>
-                <Typography>{source}</Typography>
-              </li>
-            ))}
-          </ul>
+          <Typography component="p" sx={{ fontStyle: 'italic' }}>
+            {fundingSources.join(', ')}
+          </Typography>
 
           <Typography>
             For more information about the project, visit{' '}
