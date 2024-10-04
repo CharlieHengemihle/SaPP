@@ -1,4 +1,4 @@
-import { Box, Grid, Grid2, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 
 export default function Resume() {
   return (
