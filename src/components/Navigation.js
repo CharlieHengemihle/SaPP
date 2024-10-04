@@ -18,12 +18,12 @@ export default function Navigation(props) {
     left: '0',
     right: '0',
     display: 'flex',
-    justifyContent: 'flex-end',
+    justifyContent: props.device === 'mobile' ? 'flex-start' : 'flex-end',
     alignItems: 'center',
     padding: '10px 20px',
     backgroundColor: isScrolled ? 'rgba(0,0,0, 0.8)' : 'transparent',
     boxShadow: isScrolled ? '0 2px 5px rgba(0, 0, 0, 0.1)' : 'none',
-    zIndex: 9999,
+    zIndex: 99,
     transition: 'background-color 0.3s ease',
   };
 
@@ -32,6 +32,13 @@ export default function Navigation(props) {
     margin: '0 10px',
     color: 'rgba(255,255,255)',
     fontWeight: 'bold',
+  };
+
+  const mobileMenuStyle = {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
   };
 
   // const logoStyle = {
@@ -56,7 +63,7 @@ export default function Navigation(props) {
         />
         <Typography style={linkStyle}> Carolyn Coyle </Typography>
       </Link> */}
-      <div style={{ display: props.device === 'mobile' ? 'none' : 'flex' }}>
+      <div style={props.device === 'mobile' ? mobileMenuStyle : undefined}>
         <Link className="hover-effect" to="/" style={linkStyle}>
           Home
         </Link>

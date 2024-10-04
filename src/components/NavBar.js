@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Navigation from './Navigation';
 import burger from '../assets/burger.png';
 
@@ -38,11 +38,15 @@ export default function Navbar() {
     transform: isHovered ? 'scaleX(0.8)' : 'scaleX(1)',
   };
 
-  window.addEventListener('resize', handleResize);
-
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <div>
-      <Navigation device={isMobile ? 'mobile' : 'desktop'} />
+      {!isMobile && <Navigation device="desktop" />}
       <button
         style={burgerStyle}
         onMouseEnter={() => setIsHovered(true)}

@@ -1,6 +1,7 @@
 import { Box, Typography, Grid } from '@mui/material';
 import { fundingSources } from '../contents.js';
 import banner from '../../assets/Banner.jpeg';
+import { Link } from 'react-router-dom';
 
 export default function Research() {
   return (
@@ -32,70 +33,77 @@ export default function Research() {
             color: '#fff',
           }}
         >
-          <Typography variant="h1" gutterBottom>
+          <Typography variant="h1" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
             Research
           </Typography>
         </Box>
       </Box>
-      <Typography variant="h3" gutterBottom>
+      <Typography variant="h3" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
         Dissertation Work: Songbirds as Pollinators (SaP) Project
       </Typography>
       <Grid container spacing={2} justifyContent="center" textAlign={'left'}>
-        <Grid item xs={12} md={8}>
-          <Typography variant="h5">
+        <Grid item xs={11} md={8}>
+          <Typography variant="h5" sx={{ fontFamily: 'EB Garamond' }}>
             <strong>Research Team:</strong>
           </Typography>
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             Conducted under P.I. Dr. Liba Pejchar, in collaboration with Dr. Caitlin Wells, Teia
             Schweizer, Dr. Seth Davis, and Dr. Xiaoping Li.
           </Typography>
 
-          <Typography variant="h5">
+          <Typography variant="h5" sx={{ fontFamily: 'EB Garamond' }}>
             <strong>Collaboration:</strong>
           </Typography>
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             Partnering with the Institute for Bird Populations (IBP) Monitoring Avian Production and
             Survival (MAPS) stations, as well as independent banding groups, we received pollen
             swabs from thousands of birds across the western U.S. and British Columbia. (put map
             here)
           </Typography>
 
-          <Typography variant="h5">
+          <Typography variant="h5" sx={{ fontFamily: 'EB Garamond' }}>
             <strong>Current Research Focus:</strong>
           </Typography>
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             <strong>Bird Characteristics & Pollen:</strong> What individual bird traits (e.g., sex,
             age) or environmental factors (e.g., date of first flowering) are linked to the presence
             of pollen on songbirds?
           </Typography>
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             <strong>Flower Characteristics & Bird Preferences:</strong> Are particular plant
             morphological characteristics (e.g., flower color, shape) associated with a higher
             probability of flower-foraging and pollen-carrying by songbirds? (Image 1 (pic 3) |
             Image 2 (pic 2))
           </Typography>
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             <strong>Species Richness & Network Redundancy:</strong> Does species richness or the
             relative abundance of functional groups (songbirds vs. hummingbirds) contribute to
             network indices associated with redundancy, in bird-flower networks?
           </Typography>
 
-          <Typography variant="h5" gutterBottom paddingTop={'15px'}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            paddingTop={'15px'}
+            sx={{ fontFamily: 'EB Garamond' }}
+          >
             Funding for this work is generously provided by:
           </Typography>
 
-          <Typography component="p" sx={{ fontStyle: 'italic' }}>
+          <Typography component="p" sx={{ fontStyle: 'italic', fontFamily: 'EB Garamond' }}>
             {fundingSources.join(', ')}
           </Typography>
 
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             For more information about the project, visit{' '}
             <a href="https://carolyncoyle.wixsite.com/sapproject">here</a>.
           </Typography>
 
-          <Typography>Using Participatory Science to Explore Bird-Flower Interactions</Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
+            Using Participatory Science to Explore Bird-Flower Interactions
+          </Typography>
 
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             In collaboration with Dr. Liba Pejchar and Morgan Strickrod (Sol Botany), we are
             investigating songbird-flower interactions using iNaturalist, for two California Jepson
             Floristic Provinces{' '}
@@ -104,11 +112,11 @@ export default function Research() {
             participatory science as an exciting tool to explore interactions.
           </Typography>
 
-          <Typography variant="h4" gutterBottom>
+          <Typography variant="h4" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
             Graduate Student Mental Health Access
           </Typography>
 
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             Mental health in graduate studies is a critically important issue, as the pressures of
             academia can disproportionately affect students with marginalized identities, amplifying
             the need for accessible mental health resources and support systems. I am a co-leader on
@@ -117,15 +125,15 @@ export default function Research() {
             preparing our findings for publication.
           </Typography>
 
-          <Typography variant="h4" gutterBottom>
+          <Typography variant="h4" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
             Past Research:
           </Typography>
 
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
             Do Orange-crowned Warblers Pollinate Vine Maple?
           </Typography>
 
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             Could Orange-crowned Warblers contribute to pollination of vine maples? In 2018-2019,
             inspired by and under the guidance of Dr. Aaron Liston, with help and support from Dr.
             Matt Betts and the Portland Garden Club (Kathleen R. Pamplin Fund), I sought to answer
@@ -141,13 +149,24 @@ export default function Research() {
             Fellowship, expanding this work geographically and to a larger suite of bird species.
           </Typography>
 
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             Coyle, Carolyn M., and Dustin G. Gannon. &quot;Observations of orange-crowned warblers
             in vine maple.&quot; Northwestern Naturalist 102.1 (2021): 94-95.
             <a href="https://doi.org/10.1898/1051-1733-102.1.94">
               https://doi.org/10.1898/1051-1733-102.1.94
             </a>
           </Typography>
+        </Grid>
+        <Grid item xs={11} container justifyContent="center">
+          <Link to="/" style={{ marginRight: '10px' }}>
+            Home
+          </Link>
+          <Link to="/research" style={{ marginRight: '10px' }}>
+            Research
+          </Link>
+          <Link to="/resume" style={{ marginRight: '10px' }}>
+            My Resume
+          </Link>
         </Grid>
       </Grid>
     </Box>

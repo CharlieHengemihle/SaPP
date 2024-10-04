@@ -51,7 +51,7 @@ export default function HomePage() {
 
       {/* Main Content Section */}
       <Grid container spacing={3} justifyContent="center">
-        {/* <Grid item xs={12}>
+        {/* <Grid item xs={11}>
           <img
             src={icon}
             alt="warbler visiting a red currant flower"
@@ -59,29 +59,32 @@ export default function HomePage() {
           />
         </Grid> */}
 
-        <Grid item xs={12} md={8}>
+        <Grid item xs={11} md={8}>
           <Grid container spacing={3} alignItems="center">
-            <Grid item xs={12} md={4}>
+            <Grid item xs={11} md={4}>
               <img
                 src={caro}
                 alt="Carolyn Coyle with an Orange Crowned Warbler"
                 style={{ maxWidth: '100%', marginBottom: '20px' }}
               />
             </Grid>
-            <Grid item xs={12} md={8}>
-              <Typography sx={{ fontSize: '14px', textAlign: 'left' }} gutterBottom>
+            <Grid item xs={11} md={8}>
+              <Typography
+                sx={{ fontSize: '18px', textAlign: 'left', fontFamily: 'EB Garamond' }}
+                gutterBottom
+              >
                 Welcome! My name is Carolyn Coyle, a Ph.D. candidate in the Graduate Degree Program
                 in Ecology, housed in the Fish, Wildlife, and Conservation Biology Department at
                 Colorado State University.
               </Typography>
-              <Typography sx={{ fontSize: '14px', textAlign: 'left' }}>
+              <Typography sx={{ fontSize: '16px', textAlign: 'left', fontFamily: 'EB Garamond' }}>
                 My research centers on plant-animal interactions, with a special focus on songbirds
                 as potential pollinators. With interests that span conservation biology,
                 ornithology, and pollination ecology, I have developed a deep passion for
                 understanding how birds contribute to ecosystem health, and a curiosity on how this
                 may shift across urban gradients.
               </Typography>
-              <Typography sx={{ fontSize: '14px', textAlign: 'left' }}>
+              <Typography sx={{ fontSize: '16px', textAlign: 'left', fontFamily: 'EB Garamond' }}>
                 As a dedicated conservation biologist and advocate for mental health in academia, I
                 seek to blend rigorous science with community engagement, ensuring that my research
                 has both local and global impact. Currently, I am seeking postdoctoral opportunities
@@ -97,14 +100,20 @@ export default function HomePage() {
         {/* News Section */}
         <Grid
           item
-          xs={12}
+          xs={11}
           md={8}
           sx={{ justifyContent: 'center', textAlign: 'left', width: '100%', padding: '20px' }}
         >
-          <Typography variant="h3" gutterBottom textAlign={'left'} paddingLeft={'20px'}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            textAlign={'left'}
+            paddingLeft={'20px'}
+            sx={{ fontFamily: 'EB Garamond' }}
+          >
             News:
           </Typography>
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             <strong>5/2024</strong> Great news! The Colorado State University Office of the Vice
             President for Researcher (OVPR) has selected me as a part of the VPR Graduate Fellowship
             Cohort!{' '}
@@ -116,7 +125,7 @@ export default function HomePage() {
               Read more about this opportunity here.
             </a>
           </Typography>
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             <strong>5/2024</strong> I am honored to have received a Wilson Ornithological Society
             Student Research Grant! Thank you to WOS for supporting my research endeavors.{' '}
             <a
@@ -127,14 +136,14 @@ export default function HomePage() {
               Read more here.
             </a>
           </Typography>
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             <strong>4/2024</strong> Thank you to the Pasadena Audubon Society for awarding my
             dissertation research a student research grant!{' '}
             <a href="https://pasadenaaudubon.org/grants" target="_blank" rel="noreferrer">
               Read more here.
             </a>
           </Typography>
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             <strong>3/2024</strong> I have received a Bloom-Hays Ecological Research Grant awarded
             by the Sea and Sage Audubon Society. Thank you for supporting my dissertation work!{' '}
             <a
@@ -145,7 +154,7 @@ export default function HomePage() {
               Read more here.
             </a>
           </Typography>
-          <Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
             <strong>2/2024</strong> I am honored that my dissertation research (SaP) has been
             featured in Dr. Jeff Ollerton’s new book: Birds and Flowers: An Intimate 50 Million Year
             Relationship.{' '}
@@ -160,7 +169,7 @@ export default function HomePage() {
         </Grid>
 
         {/* Links Section */}
-        <Grid item xs={12} container justifyContent="center">
+        <Grid item xs={11} container justifyContent="center">
           <Link to="/" style={{ marginRight: '10px' }}>
             Home
           </Link>
@@ -172,7 +181,7 @@ export default function HomePage() {
           </Link>
         </Grid>
 
-        {/* <Grid item xs={12}>
+        {/* <Grid item xs={11}>
           <Link to="/protocol">Pollen Getting Protocol</Link>
         </Grid> */}
       </Grid>
