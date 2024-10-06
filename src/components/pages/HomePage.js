@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Grid, Typography, Box } from '@mui/material';
 import caro from '../../assets/Coyle.jpg';
 import banner from '../../assets/Banner.jpeg';
+import SocialButtons from '../ContactButtons.js';
 
 export default function HomePage() {
   return (
@@ -97,13 +98,21 @@ export default function HomePage() {
           </Grid>
         </Grid>
 
-        {/* News Section */}
         <Grid
           item
           xs={11}
           md={8}
           sx={{ justifyContent: 'center', textAlign: 'left', width: '100%', padding: '20px' }}
         >
+          <SocialButtons />
+        </Grid>
+        <Grid
+          item
+          xs={11}
+          md={8}
+          sx={{ justifyContent: 'center', textAlign: 'left', width: '100%', padding: '20px' }}
+        >
+          {/* News Section */}
           <Typography
             variant="h5"
             gutterBottom
