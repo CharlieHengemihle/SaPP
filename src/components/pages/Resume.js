@@ -18,7 +18,7 @@ export default function Resume() {
             src={resumeUrl}
             style={{
               width: '100%',
-              maxWidth: '900px',
+              maxWidth: '1900px',
               height: '800px',
               border: 'none',
               boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.2)',
