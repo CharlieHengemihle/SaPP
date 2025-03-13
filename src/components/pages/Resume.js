@@ -1,6 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material';
 
 export default function Resume() {
+  const resumeUrl = '/resume.pdf';
   return (
     <Box
       sx={{
@@ -22,7 +23,7 @@ export default function Resume() {
       <Grid container justifyContent="center" alignItems="center">
         <Grid item xs={12} md={8} width={'100%'}>
           <iframe
-            src="https://docs.google.com/document/d/1-8p-HA3g2_Z4tOfZVfnc8Dm2745z3k9K/pub?embedded=true"
+            src={resumeUrl}
             style={{
               width: '100%',
               maxWidth: '900px',
