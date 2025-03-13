@@ -9,17 +9,9 @@ export default function Resume() {
         alignItems: 'center',
         flexDirection: 'column',
         padding: '20px',
-        backgroundColor: '#747474',
+        backgroundColor: '#323639',
       }}
     >
-      <Typography
-        variant="h4"
-        component="h1"
-        gutterBottom
-        sx={{ fontFamily: 'EB Garamond', color: 'white' }}
-      >
-        My Resume
-      </Typography>
       <Grid container justifyContent="center" alignItems="center">
         <Grid item xs={12} md={8} width={'100%'}>
           <iframe
