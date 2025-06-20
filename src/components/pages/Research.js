@@ -2,6 +2,11 @@ import { Box, Typography, Grid } from '@mui/material';
 import { fundingSources } from '../contents.js';
 import banner from '../../assets/Banner.jpeg';
 import { Link } from 'react-router-dom';
+import SapLogo from '../../assets/SaPP_logo.png';
+import observations from '../../assets/observations.png';
+import ccc from '../../assets/CCC.png';
+import birds from '../../assets/birds.png';
+import network from '../../assets/network.png';
 
 export default function Research() {
   return (
@@ -38,9 +43,13 @@ export default function Research() {
           </Typography>
         </Box>
       </Box>
-      <Typography variant="h3" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
-        Dissertation Work: Songbirds as Pollinators (SaP) Project
-      </Typography>
+      <div style={{ display: 'flex' }}>
+        <img src={SapLogo} />
+
+        <Typography variant="h3" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
+          Dissertation Work: Songbirds as Pollinators (SaP) Project
+        </Typography>
+      </div>
       <Grid container spacing={2} justifyContent="center" textAlign={'left'}>
         <Grid item xs={11} md={8}>
           <Typography variant="h5" sx={{ fontFamily: 'EB Garamond' }}>
@@ -72,14 +81,30 @@ export default function Research() {
           <Typography sx={{ fontFamily: 'EB Garamond' }}>
             <strong>Flower Characteristics & Bird Preferences:</strong> Are particular plant
             morphological characteristics (e.g., flower color, shape) associated with a higher
-            probability of flower-foraging and pollen-carrying by songbirds? (Image 1 (pic 3) |
-            Image 2 (pic 2))
+            probability of flower-foraging and pollen-carrying by songbirds? (
+            <a
+              href="https://www.inaturalist.org/observations/182423257"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Image 1 (pic 3)
+            </a>
+            {' | '}
+            <a
+              href="https://www.inaturalist.org/observations/212152059"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Image 2 (pic 2)
+            </a>
+            )
           </Typography>
           <Typography sx={{ fontFamily: 'EB Garamond' }}>
             <strong>Species Richness & Network Redundancy:</strong> Does species richness or the
             relative abundance of functional groups (songbirds vs. hummingbirds) contribute to
             network indices associated with redundancy, in bird-flower networks?
           </Typography>
+          <img src={network} style={{ maxWidth: '90vw', objectFit: 'cover' }} />
 
           <Typography
             variant="h5"
@@ -99,7 +124,12 @@ export default function Research() {
             <a href="https://carolyncoyle.wixsite.com/sapproject">here</a>.
           </Typography>
 
-          <Typography sx={{ fontFamily: 'EB Garamond' }}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            paddingTop={'15px'}
+            sx={{ fontFamily: 'EB Garamond' }}
+          >
             Using Participatory Science to Explore Bird-Flower Interactions
           </Typography>
 
@@ -107,12 +137,22 @@ export default function Research() {
             In collaboration with Dr. Liba Pejchar and Morgan Strickrod (Sol Botany), we are
             investigating songbird-flower interactions using iNaturalist, for two California Jepson
             Floristic Provinces{' '}
-            <a href="https://ucjeps.berkeley.edu/eflora/filter_keys.html">link</a>. We hope to
-            create plant-pollinator networks for these two adjacent regions to highlight
-            participatory science as an exciting tool to explore interactions.
+            <a
+              href="https://ucjeps.berkeley.edu/eflora/filter_keys.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              link
+            </a>
+            . We hope to create plant-pollinator networks for these two adjacent regions to
+            highlight participatory science as an exciting tool to explore interactions.
           </Typography>
+          <div style={{ display: 'flex', flexDirection: 'row', maxWidth: '100%', gap: '10px' }}>
+            <img src={observations} style={{ maxWidth: '45vw', objectFit: 'cover' }} />
+            <img src={birds} style={{ width: '45vw', objectFit: 'cover' }} />
+          </div>
 
-          <Typography variant="h4" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
+          <Typography variant="h5" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
             Graduate Student Mental Health Access
           </Typography>
 
@@ -121,8 +161,27 @@ export default function Research() {
             academia can disproportionately affect students with marginalized identities, amplifying
             the need for accessible mental health resources and support systems. I am a co-leader on
             a survey-based project exploring barriers to accessing mental health for graduate
-            students in life sciences. Our data collection is complete and we are currently
-            preparing our findings for publication.
+            students in life sciences. Our data collection is complete and we have submitted a
+            manuscript that is in review.
+          </Typography>
+
+          <Typography variant="h5" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
+            Nature in the City: Evaluating social and ecological outcomes of community-driven urban
+            restoration projects in Fort Collins
+          </Typography>
+          <img src={ccc} style={{ maxWidth: '90vw', objectFit: 'cover' }} />
+
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
+            Mid-sized cities, such as Fort Collins, are often expanding more rapidly than large
+            metropolitan areas, but the paths forward for sustaining biodiversity for nature and
+            people in these spaces are less well understood. In recognition that a growing
+            population could lead to the loss of green space, community concern prompted the City of
+            Fort Collins to launch the Nature in the City (NIC) Program which focuses on increasing
+            connectivity, fostering stewardship, and providing access to experiences and functional
+            habitat for people, wildlife, and plants. Our team’s goal is to understand what
+            contributes to project success and longevity, identify coverage gaps, and evaluate
+            biodiversity outcomes to ensure the NIC program’s long-term effectiveness. We further
+            aim to explore how community and city perspectives on project success align or diverge.
           </Typography>
 
           <Typography variant="h4" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
