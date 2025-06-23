@@ -60,13 +60,13 @@ export default function HomePage() {
           />
         </Grid> */}
 
-        <Grid item xs={11} md={8}>
-          <Grid container spacing={3} alignItems="center">
-            <Grid item xs={11} md={4}>
+        <Grid item xs={11}>
+          <Grid container spacing={2} alignItems="center" justifyContent="space-between">
+            <Grid item xs={11} md={3}>
               <img
                 src={caro}
                 alt="Carolyn Coyle with an Orange Crowned Warbler"
-                style={{ maxWidth: '100%', marginBottom: '20px' }}
+                style={{ maxWidth: '30vw', marginBottom: '20px' }}
               />
             </Grid>
             <Grid item xs={11} md={8}>
@@ -89,10 +89,10 @@ export default function HomePage() {
                 As a dedicated conservation biologist and advocate for mental health in academia, I
                 seek to blend rigorous science with community engagement, ensuring that my research
                 has both local and global impact. Currently, I am seeking postdoctoral opportunities
-                where I can apply my expertise in plant-animal interactions, bird ecology and
-                conservation, and participatory science. I also bring experience with ecological
-                modeling and spatial ecology and seek to strengthen those skills as a postdoctoral
-                fellow.
+                where I can apply my expertise in plant-animal interactions, bird ecology, wildlife
+                conservation, and participatory science. I also use survey and interview methods,
+                ecological modeling, and spatial ecology tools in my work, and seek to strengthen my
+                quantitative and qualitative skills as a postdoctoral fellow.
               </Typography>
             </Grid>
           </Grid>
@@ -121,6 +121,30 @@ export default function HomePage() {
             sx={{ fontFamily: 'EB Garamond' }}
           >
             News:
+          </Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
+            <strong>4/2025</strong> The Center for Collaborative Conservation has selected our
+            project, “Nature in the City: Evaluating social and ecological outcomes of
+            community-driven urban restoration projects in Fort Collins” for a CCC Fellowship.
+            Carolyn is thrilled to be a part of the CCC Fellows Cohort 15!{' '}
+            <a
+              href="https://collaborativeconservation.org/learn/fellows-program/fellows-cohort-15/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Read more about the project and other Fellow’s work, here.
+            </a>
+          </Typography>
+          <Typography sx={{ fontFamily: 'EB Garamond' }}>
+            <strong>2/2025</strong> We are incredibly honored to have been awarded an NSF DEB Award
+            for my dissertation work on songbird potential pollination.{' '}
+            <a
+              href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2437737&HistoricalAwards=false"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Read the award abstract here.
+            </a>
           </Typography>
           <Typography sx={{ fontFamily: 'EB Garamond' }}>
             <strong>5/2024</strong> Great news! The Colorado State University Office of the Vice
