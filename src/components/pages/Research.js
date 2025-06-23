@@ -123,8 +123,16 @@ export default function Research() {
             network indices associated with redundancy, in bird-flower networks?
           </Typography>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly' }}>
-            <img src={stations} style={{ maxWidth: '30vw', objectFit: 'cover' }} />
-            <img src={swab} style={{ maxWidth: '30vw', objectFit: 'cover' }} />
+            <img
+              src={stations}
+              alt="A map of the banding station locations participating in this project"
+              style={{ maxWidth: '30vw', objectFit: 'cover' }}
+            />
+            <img
+              src={swab}
+              alt="Banders at Bear Divide Banding Station swab birds for pollen. Gif courtesy of Bear Divide Banding Station"
+              style={{ maxWidth: '30vw', objectFit: 'cover' }}
+            />
           </div>
 
           <Typography
@@ -169,8 +177,16 @@ export default function Research() {
             highlight participatory science as an exciting tool to explore interactions.
           </Typography>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly' }}>
-            <img src={observations} style={{ maxWidth: '30vw', objectFit: 'cover' }} />
-            <img src={birds} style={{ width: '30vw', objectFit: 'cover' }} />
+            <img
+              src={observations}
+              alt="Map showing locations of observations reported on iNaturalist"
+              style={{ maxWidth: '30vw', objectFit: 'cover' }}
+            />
+            <img
+              src={birds}
+              alt="Images of birds flower foraging from iNaturalist"
+              style={{ width: '30vw', objectFit: 'cover' }}
+            />
           </div>
 
           <Typography variant="h5" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
@@ -190,7 +206,11 @@ export default function Research() {
             Nature in the City: Evaluating social and ecological outcomes of community-driven urban
             restoration projects in Fort Collins
           </Typography>
-          <img src={ccc} style={{ maxWidth: '65vw', objectFit: 'cover' }} />
+          <img
+            src={ccc}
+            alt="Center for Collaborative Conservation logo"
+            style={{ maxWidth: '65vw', objectFit: 'cover' }}
+          />
 
           <Typography sx={{ fontFamily: 'EB Garamond' }}>
             Mid-sized cities, such as Fort Collins, are often expanding more rapidly than large
