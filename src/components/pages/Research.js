@@ -6,7 +6,8 @@ import SapLogo from '../../assets/SaPP_logo.png';
 import observations from '../../assets/observations.png';
 import ccc from '../../assets/CCC.png';
 import birds from '../../assets/birds.png';
-import network from '../../assets/network.png';
+import stations from '../../assets/stations.png';
+import swab from '../../assets/swab.gif';
 
 export default function Research() {
   return (
@@ -43,8 +44,25 @@ export default function Research() {
           </Typography>
         </Box>
       </Box>
-      <div style={{ display: 'flex' }}>
-        <img src={SapLogo} />
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '16px',
+          maxWidth: '75vw',
+          justifyContent: 'center',
+          textAlign: 'center',
+          justifySelf: 'center',
+        }}
+      >
+        <img
+          src={SapLogo}
+          alt="SaP Logo"
+          style={{
+            height: '7rem',
+            width: 'auto',
+          }}
+        />
 
         <Typography variant="h3" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
           Dissertation Work: Songbirds as Pollinators (SaP) Project
@@ -104,7 +122,10 @@ export default function Research() {
             relative abundance of functional groups (songbirds vs. hummingbirds) contribute to
             network indices associated with redundancy, in bird-flower networks?
           </Typography>
-          <img src={network} style={{ maxWidth: '90vw', objectFit: 'cover' }} />
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly' }}>
+            <img src={stations} style={{ maxWidth: '30vw', objectFit: 'cover' }} />
+            <img src={swab} style={{ maxWidth: '30vw', objectFit: 'cover' }} />
+          </div>
 
           <Typography
             variant="h5"
@@ -147,9 +168,9 @@ export default function Research() {
             . We hope to create plant-pollinator networks for these two adjacent regions to
             highlight participatory science as an exciting tool to explore interactions.
           </Typography>
-          <div style={{ display: 'flex', flexDirection: 'row', maxWidth: '100%', gap: '10px' }}>
-            <img src={observations} style={{ maxWidth: '45vw', objectFit: 'cover' }} />
-            <img src={birds} style={{ width: '45vw', objectFit: 'cover' }} />
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly' }}>
+            <img src={observations} style={{ maxWidth: '30vw', objectFit: 'cover' }} />
+            <img src={birds} style={{ width: '30vw', objectFit: 'cover' }} />
           </div>
 
           <Typography variant="h5" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
@@ -169,7 +190,7 @@ export default function Research() {
             Nature in the City: Evaluating social and ecological outcomes of community-driven urban
             restoration projects in Fort Collins
           </Typography>
-          <img src={ccc} style={{ maxWidth: '90vw', objectFit: 'cover' }} />
+          <img src={ccc} style={{ maxWidth: '65vw', objectFit: 'cover' }} />
 
           <Typography sx={{ fontFamily: 'EB Garamond' }}>
             Mid-sized cities, such as Fort Collins, are often expanding more rapidly than large
