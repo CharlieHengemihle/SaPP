@@ -24,7 +24,7 @@ export default function HomePage() {
         <img
           src={banner}
           alt="Orange Crowned Warbler in prunus species"
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
         />
         <Box
           sx={{
@@ -60,7 +60,7 @@ export default function HomePage() {
           />
         </Grid> */}
 
-        <Grid item xs={11}>
+        <Grid item xs={11} md={9}>
           <Grid container spacing={2} alignItems="center" justifyContent="space-between">
             <Grid item xs={11} md={3}>
               <img
@@ -69,23 +69,28 @@ export default function HomePage() {
                 style={{ maxWidth: '30vw', marginBottom: '20px' }}
               />
             </Grid>
-            <Grid item xs={11} md={8}>
+            <Grid item xs={11} md={7}>
               <Typography
-                sx={{ fontSize: '18px', textAlign: 'left', fontFamily: 'EB Garamond' }}
+                sx={{
+                  fontWeight: 'bold',
+                  fontSize: '24px',
+                  textAlign: 'left',
+                  fontFamily: 'EB Garamond',
+                }}
                 gutterBottom
               >
                 Welcome! My name is Carolyn Coyle, a Ph.D. candidate in the Graduate Degree Program
                 in Ecology, housed in the Fish, Wildlife, and Conservation Biology Department at
                 Colorado State University.
               </Typography>
-              <Typography sx={{ fontSize: '16px', textAlign: 'left', fontFamily: 'EB Garamond' }}>
+              <Typography sx={{ fontSize: '20px', textAlign: 'left', fontFamily: 'EB Garamond' }}>
                 My research centers on plant-animal interactions, with a special focus on songbirds
                 as potential pollinators. With interests that span conservation biology,
                 ornithology, and pollination ecology, I have developed a deep passion for
                 understanding how birds contribute to ecosystem health, and a curiosity on how this
                 may shift across urban gradients.
               </Typography>
-              <Typography sx={{ fontSize: '16px', textAlign: 'left', fontFamily: 'EB Garamond' }}>
+              <Typography sx={{ fontSize: '20px', textAlign: 'left', fontFamily: 'EB Garamond' }}>
                 As a dedicated conservation biologist and advocate for mental health in academia, I
                 seek to blend rigorous science with community engagement, ensuring that my research
                 has both local and global impact. Currently, I am seeking postdoctoral opportunities
@@ -101,7 +106,7 @@ export default function HomePage() {
         <Grid
           item
           xs={11}
-          md={8}
+          md={9}
           sx={{ justifyContent: 'center', textAlign: 'left', width: '100%', padding: '20px' }}
         >
           <SocialButtons />
@@ -109,7 +114,7 @@ export default function HomePage() {
         <Grid
           item
           xs={11}
-          md={8}
+          md={9}
           sx={{ justifyContent: 'center', textAlign: 'left', width: '100%', padding: '20px' }}
         >
           {/* News Section */}
@@ -206,17 +211,19 @@ export default function HomePage() {
           <Link to="/" style={{ marginRight: '10px' }}>
             Home
           </Link>
-          <Link to="/research" style={{ marginRight: '10px' }}>
-            Research
+          <Link to="/research/dissertation" style={{ marginRight: '10px' }}>
+            Dissertation Work
+          </Link>
+          <Link to="/research/participatory-science" style={{ marginRight: '10px' }}>
+            Participatory Science
+          </Link>
+          <Link to="/research/past" style={{ marginRight: '10px' }}>
+            Past Research
           </Link>
           <Link to="/resume" style={{ marginRight: '10px' }}>
             My Resume
           </Link>
         </Grid>
-
-        {/* <Grid item xs={11}>
-          <Link to="/protocol">Pollen Getting Protocol</Link>
-        </Grid> */}
       </Grid>
     </Box>
   );

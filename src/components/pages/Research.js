@@ -28,7 +28,7 @@ export default function Research() {
         <img
           src={banner}
           alt="Orange Crowned Warbler in prunus species"
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
         />
         <Box
           sx={{
@@ -69,7 +69,7 @@ export default function Research() {
         </Typography>
       </div>
       <Grid container spacing={2} justifyContent="center" textAlign={'left'}>
-        <Grid item xs={11} md={8}>
+        <Grid item xs={11} md={9}>
           <Typography variant="h5" sx={{ fontFamily: 'EB Garamond' }}>
             <strong>Research Team:</strong>
           </Typography>
@@ -157,6 +157,7 @@ export default function Research() {
             variant="h5"
             gutterBottom
             paddingTop={'15px'}
+            fontWeight={'bold'}
             sx={{ fontFamily: 'EB Garamond' }}
           >
             Using Participatory Science to Explore Bird-Flower Interactions
@@ -189,7 +190,12 @@ export default function Research() {
             />
           </div>
 
-          <Typography variant="h5" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
+          <Typography
+            fontWeight={'bold'}
+            variant="h5"
+            gutterBottom
+            sx={{ fontFamily: 'EB Garamond' }}
+          >
             Graduate Student Mental Health Access
           </Typography>
 
@@ -202,7 +208,12 @@ export default function Research() {
             manuscript that is in review.
           </Typography>
 
-          <Typography variant="h5" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
+          <Typography
+            fontWeight={'bold'}
+            variant="h5"
+            gutterBottom
+            sx={{ fontFamily: 'EB Garamond' }}
+          >
             Nature in the City: Evaluating social and ecological outcomes of community-driven urban
             restoration projects in Fort Collins
           </Typography>
@@ -219,17 +230,23 @@ export default function Research() {
             population could lead to the loss of green space, community concern prompted the City of
             Fort Collins to launch the Nature in the City (NIC) Program which focuses on increasing
             connectivity, fostering stewardship, and providing access to experiences and functional
-            habitat for people, wildlife, and plants. Our team’s goal is to understand what
+            habitat for people, wildlife, and plants. Our team&apos;s goal is to understand what
             contributes to project success and longevity, identify coverage gaps, and evaluate
-            biodiversity outcomes to ensure the NIC program’s long-term effectiveness. We further
-            aim to explore how community and city perspectives on project success align or diverge.
+            biodiversity outcomes to ensure the NIC program&apos;s long-term effectiveness. We
+            further aim to explore how community and city perspectives on project success align or
+            diverge.
           </Typography>
 
           <Typography variant="h4" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
             Past Research:
           </Typography>
 
-          <Typography variant="h5" gutterBottom sx={{ fontFamily: 'EB Garamond' }}>
+          <Typography
+            fontWeight={'bold'}
+            variant="h5"
+            gutterBottom
+            sx={{ fontFamily: 'EB Garamond' }}
+          >
             Do Orange-crowned Warblers Pollinate Vine Maple?
           </Typography>
 

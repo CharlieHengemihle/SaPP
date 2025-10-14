@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 export default function Navigation(props) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isResearchHovered, setIsResearchHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +19,7 @@ export default function Navigation(props) {
     left: '0',
     right: '0',
     display: 'flex',
-    justifyContent: props.device === 'mobile' ? 'flex-start' : 'flex-end',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     padding: '10px 20px',
     backgroundColor: isScrolled ? 'rgba(0,0,0, 0.8)' : 'transparent',
@@ -39,6 +40,31 @@ export default function Navigation(props) {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
+  };
+
+  const dropdownContainerStyle = {
+    position: 'relative',
+    display: 'inline-block',
+  };
+
+  const dropdownMenuStyle = {
+    position: 'absolute',
+    top: '100%',
+    left: '0',
+    backgroundColor: 'rgba(0,0,0, 0.9)',
+    minWidth: '200px',
+    boxShadow: '0 8px 16px rgba(0,0,0,0.2)',
+    zIndex: 100,
+    display: isResearchHovered ? 'flex' : 'none',
+    flexDirection: 'column',
+    paddingTop: '5px',
+  };
+
+  const dropdownLinkStyle = {
+    ...linkStyle,
+    display: 'block',
+    padding: '10px 15px',
+    margin: '0',
   };
 
   // const logoStyle = {
@@ -67,9 +93,30 @@ export default function Navigation(props) {
         <Link className="hover-effect" to="/" style={linkStyle}>
           Home
         </Link>
-        <Link className="hover-effect" to="/research" style={linkStyle}>
-          Research
-        </Link>
+        <div
+          style={dropdownContainerStyle}
+          onMouseEnter={() => setIsResearchHovered(true)}
+          onMouseLeave={() => setIsResearchHovered(false)}
+        >
+          <Link className="hover-effect" style={linkStyle}>
+            Research
+          </Link>
+          <div style={dropdownMenuStyle}>
+            <Link className="hover-effect" to="/research/dissertation" style={dropdownLinkStyle}>
+              Dissertation Research
+            </Link>
+            <Link
+              className="hover-effect"
+              to="/research/participatory-science"
+              style={dropdownLinkStyle}
+            >
+              Community Centered Work
+            </Link>
+            <Link className="hover-effect" to="/research/past" style={dropdownLinkStyle}>
+              Past Research
+            </Link>
+          </div>
+        </div>
         <Link className="hover-effect" to="/resume" style={linkStyle}>
           Resume
         </Link>
