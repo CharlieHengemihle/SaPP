@@ -3,7 +3,6 @@ import banner from '../../assets/Banner.jpeg';
 import { Link } from 'react-router-dom';
 import observations from '../../assets/observations.png';
 import ccc from '../../assets/CCC.png';
-import birds from '../../assets/birds.png';
 import INaturalistWidget from '../INaturalistWidget.js';
 
 export default function ParticipatoryScience() {

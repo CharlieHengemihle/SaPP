@@ -9,8 +9,6 @@ export default function INaturalistWidget() {
     const fetchObservations = async () => {
       try {
         setLoading(true);
-        console.log('INaturalistWidget: Fetching observations from API...');
-
         // Fetch observations from the project using iNaturalist API
         const response = await fetch(
           'https://api.inaturalist.org/v1/observations?project_id=215961&layout=small&per_page=16&order=desc&order_by=created_at&photos=true&sounds=false&geoprivacy=open'
@@ -21,8 +19,6 @@ export default function INaturalistWidget() {
         }
 
         const data = await response.json();
-        console.log('INaturalistWidget: API response:', data);
-
         setObservations(data.results || []);
         setError(null);
       } catch (err) {
