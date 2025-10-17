@@ -83,7 +83,7 @@ export default function ParticipatoryScience() {
                   padding: '20px 20px 0 20px',
                 }}
               >
-                In collaboration with Dr. Liba Pejchar and Morgan Strickrod (Sol Botany), we are
+                In collaboration with Dr. Liba Pejchar and Morgan Stickrod (UC Riverside), we are
                 investigating songbird-flower interactions using iNaturalist, for two California
                 Jepson Floristic Provinces{' '}
                 <a
