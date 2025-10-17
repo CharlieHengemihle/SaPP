@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <Box
       sx={{
-        backgroundColor: 'rgb(218, 222, 203)',
+        backgroundColor: 'rgba(215, 223, 178, 0.52)',
         textAlign: 'center',
       }}
     >
@@ -123,7 +123,7 @@ export default function HomePage() {
             gutterBottom
             textAlign={'left'}
             paddingLeft={'20px'}
-            sx={{ fontFamily: 'EB Garamond' }}
+            sx={{ fontFamily: 'EB Garamond', fontWeight: 'bold' }}
           >
             News:
           </Typography>
@@ -212,7 +212,7 @@ export default function HomePage() {
             Home
           </Link>
           <Link to="/research/dissertation" style={{ marginRight: '10px' }}>
-            Dissertation Work
+            Dissertation Work (SaP Project)
           </Link>
           <Link to="/research/participatory-science" style={{ marginRight: '10px' }}>
             Participatory Science

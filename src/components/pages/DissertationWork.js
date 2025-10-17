@@ -70,15 +70,14 @@ export default function DissertationWork() {
           <Typography variant="h5" sx={{ fontFamily: 'EB Garamond' }}>
             <strong>Research Team:</strong>
           </Typography>
-          <Typography sx={{ fontFamily: 'EB Garamond' }}>
+          <Typography sx={{ fontFamily: 'EB Garamond', fontSize: '1.25rem', fontWeight: '500' }}>
             Conducted under P.I. Dr. Liba Pejchar, in collaboration with Dr. Caitlin Wells, Teia
             Schweizer, Dr. Seth Davis, and Dr. Xiaoping Li.
           </Typography>
-
-          <Typography variant="h5" sx={{ fontFamily: 'EB Garamond' }}>
+          <Typography variant="h5" sx={{ fontFamily: 'EB Garamond', fontSize: '1.2rem' }}>
             <strong>Collaboration:</strong>
           </Typography>
-          <Typography sx={{ fontFamily: 'EB Garamond' }}>
+          <Typography sx={{ fontFamily: 'EB Garamond', fontSize: '1.2rem' }}>
             Partnering with the Institute for Bird Populations (IBP) Monitoring Avian Production and
             Survival (MAPS) stations, as well as independent banding groups, we received pollen
             swabs from thousands of birds across the western U.S. and British Columbia. (put map
@@ -150,23 +149,23 @@ export default function DissertationWork() {
             <a href="https://carolyncoyle.wixsite.com/sapproject">here</a>.
           </Typography>
         </Grid>
-        <Grid item xs={11} container justifyContent="center">
-          <Link to="/" style={{ marginRight: '10px' }}>
-            Home
-          </Link>
-          <Link to="/research/dissertation" style={{ marginRight: '10px' }}>
-            Dissertation Work
-          </Link>
-          <Link to="/research/participatory-science" style={{ marginRight: '10px' }}>
-            Participatory Science
-          </Link>
-          <Link to="/research/past" style={{ marginRight: '10px' }}>
-            Past Research
-          </Link>
-          <Link to="/resume" style={{ marginRight: '10px' }}>
-            My Resume
-          </Link>
-        </Grid>
+      </Grid>
+      <Grid item xs={11} container justifyContent="center">
+        <Link to="/" style={{ marginRight: '10px' }}>
+          Home
+        </Link>
+        <Link to="/research/dissertation" style={{ marginRight: '10px' }}>
+          Dissertation Work (SaP Project)
+        </Link>
+        <Link to="/research/participatory-science" style={{ marginRight: '10px' }}>
+          Participatory Science
+        </Link>
+        <Link to="/research/past" style={{ marginRight: '10px' }}>
+          Past Research
+        </Link>
+        <Link to="/resume" style={{ marginRight: '10px' }}>
+          My Resume
+        </Link>
       </Grid>
     </Box>
   );

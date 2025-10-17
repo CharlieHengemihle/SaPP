@@ -103,7 +103,7 @@ export default function Navigation(props) {
           </Link>
           <div style={dropdownMenuStyle}>
             <Link className="hover-effect" to="/research/dissertation" style={dropdownLinkStyle}>
-              Dissertation Research
+              Dissertation Research (SaP Project)
             </Link>
             <Link
               className="hover-effect"

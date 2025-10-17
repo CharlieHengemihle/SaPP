@@ -171,7 +171,7 @@ export default function ParticipatoryScience() {
           <img
             src={ccc}
             alt="Center for Collaborative Conservation logo"
-            style={{ maxWidth: '65vw', objectFit: 'cover' }}
+            style={{ maxWidth: '65vw', objectFit: 'cover', justifySelf: 'center' }}
           />
         </Grid>
         <Grid item xs={11} container justifyContent="center">
@@ -179,7 +179,7 @@ export default function ParticipatoryScience() {
             Home
           </Link>
           <Link to="/research/dissertation" style={{ marginRight: '10px' }}>
-            Dissertation Work
+            Dissertation Work (SaP Project)
           </Link>
           <Link to="/research/participatory-science" style={{ marginRight: '10px' }}>
             Participatory Science

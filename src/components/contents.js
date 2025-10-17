@@ -1,6 +1,6 @@
 export const fundingSources = [
-  'National Science Foundation',
-  'Graduate Research Fellowship',
+  'National Science Foundation DEB (Award Number 2437737)',
+  'National Science Foundation Graduate Research Fellowship (NSF GRFP)',
   'Colorado State University',
   'Vice President for Research (VPR) Graduate Fellows Program',
   'Graduate Degree Program in Ecology Training & Travel Grant',
