@@ -71,8 +71,8 @@ export default function DissertationWork() {
             <strong>Research Team:</strong>
           </Typography>
           <Typography sx={{ fontFamily: 'EB Garamond', fontSize: '1.25rem', fontWeight: '500' }}>
-            Conducted under P.I. Dr. Liba Pejchar, in collaboration with Dr. Caitlin Wells, Teia
-            Schweizer, Dr. Seth Davis, and Dr. Xiaoping Li.
+            Conducted under P.I. Dr. Liba Pejchar, in collaboration with Dr. Caitlin Wells, Abigail
+            Feuka, Dr. Seth Davis, and Dr. Xiaoping Li.
           </Typography>
           <Typography variant="h5" sx={{ fontFamily: 'EB Garamond', fontSize: '1.2rem' }}>
             <strong>Collaboration:</strong>

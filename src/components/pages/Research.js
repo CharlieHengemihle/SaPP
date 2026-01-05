@@ -74,8 +74,8 @@ export default function Research() {
             <strong>Research Team:</strong>
           </Typography>
           <Typography sx={{ fontFamily: 'EB Garamond' }}>
-            Conducted under P.I. Dr. Liba Pejchar, in collaboration with Dr. Caitlin Wells, Teia
-            Schweizer, Dr. Seth Davis, and Dr. Xiaoping Li.
+            Conducted under P.I. Dr. Liba Pejchar, in collaboration with Dr. Caitlin Wells, Abigail
+            Feuka, Dr. Seth Davis, and Dr. Xiaoping Li.
           </Typography>
 
           <Typography variant="h5" sx={{ fontFamily: 'EB Garamond' }}>
