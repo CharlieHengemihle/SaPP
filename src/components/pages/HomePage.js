@@ -94,10 +94,11 @@ export default function HomePage() {
                 As a dedicated conservation biologist and advocate for mental health in academia, I
                 seek to blend rigorous science with community engagement, ensuring that my research
                 has both local and global impact. Currently, I am seeking postdoctoral opportunities
-                where I can apply my expertise in plant-animal interactions, bird ecology, wildlife
-                conservation, and participatory science. I also use survey and interview methods,
-                ecological modeling, and spatial ecology tools in my work, and seek to strengthen my
-                quantitative and qualitative skills as a postdoctoral fellow.
+                where I can apply my expertise in community ecology, plant-animal interactions,
+                avian ecology, pollination ecology, wildlife conservation, and/or participatory
+                science. I also use survey and interview methods, ecological modeling, and spatial
+                ecology tools in my work, and seek to strengthen my quantitative and qualitative
+                skills as a postdoctoral fellow.
               </Typography>
             </Grid>
           </Grid>
